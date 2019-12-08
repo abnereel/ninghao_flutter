@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ninghao_flutter/demo/basic_demo.dart';
 import 'package:ninghao_flutter/demo/form_demo.dart';
 import 'package:ninghao_flutter/demo/material_components.dart';
+import 'package:ninghao_flutter/demo/state/state_management_demo.dart';
+import 'package:ninghao_flutter/demo/stream/stream_demo.dart';
 import './demo/listview_demo.dart';
 import './demo/drawer_demo.dart';
 import './demo/bottom_navigation_bar_demo.dart';
@@ -16,12 +18,14 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // 去掉右上角的debug显示
       // home: NavigatorDemo(),
-      initialRoute: "/mdc",
+      initialRoute: "/stream",
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
         '/form': (context) => FormDemo(),
-        '/mdc': (context) => MaterialComponents()
+        '/mdc': (context) => MaterialComponents(),
+        '/state-management': (context) => StateManagementDemo(),
+        '/stream': (context) => StreamDemo()
       },
       theme: ThemeData( // 设置主题
         primarySwatch: Colors.yellow,
